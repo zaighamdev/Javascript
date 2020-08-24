@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: aqua;
+    background-image: url(https://subwallpaper.com/Widescreen-Wallpapers/laptop-wallpaper-nature-images-For-Widescreen-Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
