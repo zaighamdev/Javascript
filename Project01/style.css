@@ -90,26 +90,37 @@ h2 {
 
 .form button{
     cursor: pointer;
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: green;
+    border: 2px solid green;
     display: block;
     font-size: 16px;
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     color: white;
-
+    border-radius: 5px;
 }
 
 button.home {
     cursor: pointer;
-    background-color: blue;
-    border: 2px solid blue;
-    color: white;
+    background-color: lightgray;
+    border: 2px solid lightgray ;
+    color: gray;
     font-size: 16px;
     width: 75%;
     padding: 10px;
     margin-bottom: 20px;
-    margin-left: 50px;
-    
+    margin-left: 55px;
+    border-radius: 5px;      
+}
+
+button:hover {
+     
+    transform: scale(1.05);
+
+}
+
+.home:hover {
+    background-color: lightseagreen;
+    color: black;
 }
