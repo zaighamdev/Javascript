@@ -111,12 +111,13 @@ button.home {
     padding: 10px;
     margin-bottom: 20px;
     margin-left: 55px;
-    border-radius: 5px;      
+    border-radius: 5px;  
 }
 
 button:hover {
      
     transform: scale(1.05);
+    border-block-color: green;
 
 }
 
