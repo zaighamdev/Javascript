@@ -51,6 +51,7 @@ h1 {
 
 .fa-stop {
     color: red;
+    border-radius: 5px;
 }
 
 .fa-pause {
