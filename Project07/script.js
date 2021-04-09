@@ -37,7 +37,44 @@ function displaySelectedWord() {
     `;
 
     const wordText = word.innerText.replace(/\n/g, '');
-    console.log(word.innerText);
-    console.log(wordText);
+    if (wordText === selectWord) {
+        message.innerText = 'You Won!';
+        popup.style.display = 'flex';
+
+    }
+};
+
+// Function to display the sliding notification
+function showNotification() {
+    notitification.classList.add('show');
+
+    setTimeout(() => { notitification.classList.remove('show'); }, 3000)
 }
+
+// Function to update Incorrect Letters
+
+
+// Event Handlers
+// 1. Event handler for keyboard Button press
+window.addEventListener('keydown', e => {
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+        const letter = e.key;
+        if (selectWord.includes(letter)) {
+            if (!correctLetters.includes(letter)) {
+                correctLetters.push(letter);
+                displaySelectedWord();
+            } else {
+                showNotification();
+            }
+        } else {
+            if (!incorrectLetters.includes(letter)) {
+                incorrectLetters.push(letter);
+                updateWrongLetters();
+            } else {
+                showNotification();
+            }
+        }
+    }
+})
+
 displaySelectedWord();
