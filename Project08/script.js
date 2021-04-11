@@ -13,7 +13,24 @@ function searchMeal(e) {
 
     // Get the search term from input field
     const term = search.value;
-    console.log(term);
+
+    // Check if search term exists.
+    if (term.trim()) {
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                resultHeading.innerHTML = `<h2>Search result for '${term}' </h2>`
+                if (data.meals === null) {
+                    resultHeading.innerHTML = `<p>There are no search result for '${term}'. Please try a different search</p>`
+                }
+
+            })
+
+
+    } else {
+        alert('Please Enter a valid search')
+    }
 }
 
 // Event listners
